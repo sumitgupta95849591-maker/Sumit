@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17130e">
+<title>GUPTA JI BURGER CENTRE | Burgers, Momos & More</title>
+<style>
+:root{--gold:#ffca05;--orange:#ff781f;--ink:#17130e;--cream:#fffaf0;--green:#11b95b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--cream);color:#191919}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+header{position:sticky;top:0;z-index:10;background:#17130ef2;color:white;display:flex;align-items:center;justify-content:space-between;padding:12px max(5%,calc((100% - 1200px)/2));gap:18px;backdrop-filter:blur(10px)}
+.logo{font-size:1.35rem;font-weight:900;color:var(--gold);line-height:1.05}.logo small{display:block;font-size:.72rem;color:white;text-align:center;font-weight:600}
+nav{display:flex;gap:20px;align-items:center;font-size:.9rem}nav a:hover{color:var(--gold)}.wa{background:var(--green);color:white;border:0;border-radius:999px;padding:11px 16px;font-weight:800;cursor:pointer}
+.hero{color:white;background:linear-gradient(90deg,#100d09f5 0%,#100d09d9 43%,#100d0950 100%),url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:440px;display:flex;align-items:center;padding:60px max(6%,calc((100% - 1150px)/2))}
+.hero-content{max-width:590px}.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:.98;margin:12px 0;color:var(--gold)}.hero h1 span{display:block;color:white;font-size:.58em;margin-top:10px}.hero p{font-size:1.1rem;line-height:1.6;color:#f5eee4}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;border:0;border-radius:12px;padding:13px 20px;font-weight:850;background:var(--gold);color:#17130e;cursor:pointer}.btn.outline{background:transparent;color:white;border:1px solid white}
+section{padding:58px max(5%,calc((100% - 1150px)/2))}.section-head{text-align:center;margin:0 auto 28px}.section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px}.section-head p{color:#65605a;margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service,.menu-card,.about-card,.booking-card{border-radius:18px;padding:22px;background:white;box-shadow:0 8px 24px #251a1010;border:1px solid #eee5d7}.service .emoji{font-size:2rem}.service h3{margin:10px 0 5px}.service p{margin:0;color:#625b53}
+.dark{background:#17130e;color:white}.dark .section-head p{color:#d2c8ba}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:14px;display:block}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.menu-card{padding:0;overflow:hidden}.menu-card h3{margin:0;padding:15px 18px;background:var(--orange);color:white}.menu-card:nth-child(2) h3{background:#56a91e}.menu-card:nth-child(3) h3{background:#229de1}.menu-list{padding:14px 18px}.menu-item{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #ddd;font-size:.95rem}.menu-item:last-child{border:0}.price{font-weight:850;white-space:nowrap}.combo{margin-top:20px;padding:20px;border-radius:16px;background:#fff0e9;text-align:center;border:1px solid #ffd3c3}.combo strong{font-size:1.8rem;color:#d92525;display:block}
+.booking{background:linear-gradient(120deg,#ffdb51,#ff8b32)}.booking-card{max-width:800px;margin:auto;padding:28px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;font-weight:750;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #d8d0c4;border-radius:10px;background:#fff}.field.full{grid-column:1/-1}.booking-card button{width:100%;margin-top:16px}
+.about{display:grid;grid-template-columns:1fr 1.5fr;gap:30px;align-items:center}.about img{width:100%;height:270px;object-fit:cover;border-radius:18px}.about p{line-height:1.7;color:#514a42}.checks{display:flex;gap:10px;flex-wrap:wrap}.checks span{background:#fff0c2;padding:8px 12px;border-radius:999px;font-size:.9rem;font-weight:700}
+footer{background:#111;color:white;padding:28px max(5%,calc((100% - 1150px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}footer p{margin:5px 0;color:#d4d0c9;font-size:.9rem}.smallprint{text-align:center;background:#111;color:#aaa;border-top:1px solid #38332d;padding:14px;font-size:.8rem}
+@media(max-width:760px){header{flex-wrap:wrap;padding:12px 5%}nav{order:3;width:100%;overflow:auto;gap:16px;padding:5px 0}nav a{white-space:nowrap}.hero{min-height:420px;padding:45px 6%;background-position:58% center}.services{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.gallery img{height:160px}.menu-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about img{height:220px}section{padding:44px 5%}}
+@media(max-width:420px){.services{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{font-size:3.1rem}.wa{padding:9px 12px}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">👨‍🍳 GUPTA JI <small>BURGER CENTRE</small></a>
+  <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#services">Services</a><a href="#menu">Menu & Pricing</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#booking">Book Now</a></nav>
+  <a class="wa" id="headerWa" href="#booking">WhatsApp ↗</a>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-content">
+  <div class="eyebrow">Fresh food • Great taste • Always</div>
+  <h1>Gupta Ji <span>Burger Point</span></h1>
+  <p>Craving juicy burgers, tasty momos, and refreshing drinks? Find your next favourite bite right here.</p>
+  <div class="buttons"><a class="btn" href="#menu">🍔 View Menu</a><a class="btn outline" href="#booking">▦ Book Your Order</a></div>
+</div></section>
+<section id="services"><div class="section-head"><h2>Our Services</h2><p>Freshly prepared favourites, served with care.</p></div>
+  <div class="services">
+    <article class="service"><div class="emoji">🍔</div><h3>Fresh Burgers</h3><p>Juicy, tasty burgers made fresh to order.</p></article>
+    <article class="service"><div class="emoji">🥟</div><h3>Delicious Momos</h3><p>Steamed and fried options with tasty chutney.</p></article>
+    <article class="service"><div class="emoji">🥤</div><h3>Refreshing Drinks</h3><p>Cold drinks and beverages to go with your meal.</p></article>
+    <article class="service"><div class="emoji">🧼</div><h3>Hygiene First</h3><p>We aim to keep preparation clean and careful.</p></article>
+    <article class="service"><div class="emoji">⚡</div><h3>Quick Service</h3><p>Easy ordering for a quick bite on busy days.</p></article>
+    <article class="service"><div class="emoji">📅</div><h3>Order Booking</h3><p>Send an order request in advance using the form.</p></article>
+  </div>
+</section>
+<section class="dark" id="gallery"><div class="section-head"><h2>Our <span style="color:#ffca05">Gallery</span></h2><p>A little taste of the food we love.</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Burger with fresh toppings" loading="lazy">
+<img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=700&q=80" alt="Steamed dumplings" loading="lazy">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80" alt="Burger and fries" loading="lazy">
+</div></section>
+<section id="menu"><div class="section-head"><h2>Menu & Pricing</h2><p>Good taste at friendly prices. Prices can be updated to match your actual menu.</p></div>
+<div class="menu-grid">
+<article class="menu-card"><h3>🍔 Burgers</h3><div class="menu-list">
+<div class="menu-item"><span>Veg Burger</span><span class="price">₹40</span></div><div class="menu-item"><span>Aloo Tikki Burger</span><span class="price">₹50</span></div><div class="menu-item"><span>Paneer Burger</span><span class="price">₹60</span></div><div class="menu-item"><span>Cheese Burger</span><span class="price">₹70</span></div><div class="menu-item"><span>Double Patty Burger</span><span class="price">₹90</span></div><div class="menu-item"><span>Special Gupta Ji Burger</span><span class="price">₹110</span></div><div class="menu-item"><span>Extra Cheese</span><span class="price">₹15</span></div>
+</div></article>
+<article class="menu-card"><h3>🥟 Momos</h3><div class="menu-list">
+<div class="menu-item"><span>Veg Momos (6 pcs)</span><span class="price">₹40</span></div><div class="menu-item"><span>Paneer Momos (6 pcs)</span><span class="price">₹60</span></div><div class="menu-item"><span>Chicken Momos (6 pcs)</span><span class="price">₹70</span></div><div class="menu-item"><span>Fried Momos (6 pcs)</span><span class="price">₹60</span></div><div class="menu-item"><span>Tandoori Momos (6 pcs)</span><span class="price">₹80</span></div><div class="menu-item"><span>Extra Chutney</span><span class="price">₹10</span></div>
+</div></article>
+<article class="menu-card"><h3>🥤 Drinks</h3><div class="menu-list">
+<div class="menu-item"><span>Cold Drink (250 ml)</span><span class="price">₹20</span></div><div class="menu-item"><span>Cold Drink (500 ml)</span><span class="price">₹35</span></div><div class="menu-item"><span>Masala Soda</span><span class="price">₹25</span></div><div class="menu-item"><span>Lemon Soda</span><span class="price">₹30</span></div><div class="menu-item"><span>Water Bottle</span><span class="price">₹15</span></div></div>
+<div class="combo">👑 <b>Special Combo</b><br>Burger + Momos + Drink<strong>₹120</strong><small>Ask us about today's availability.</small></div>
+</article>
+</div></section>
+<section class="booking" id="booking"><div class="section-head"><h2>Book Your Order</h2><p>Choose your preferred date, time, and items; your request opens in WhatsApp.</p></div>
+<div class="booking-card"><form id="orderForm"><div class="form-grid">
+<div class="field"><label for="customer">Your name</label><input id="customer" required placeholder="Enter your name"></div>
+<div class="field"><label for="phone">Your phone number</label><input id="phone" required inputmode="tel" placeholder="Enter phone number"></div>
+<div class="field"><label for="date">Pickup date</label><input id="date" type="date" required></div>
+<div class="field"><label for="time">Preferred time</label><input id="time" type="time" required></div>
+<div class="field full"><label for="item">What would you like?</label><select id="item" required><option value="">Select an item</option><option>Veg Burger</option><option>Aloo Tikki Burger</option><option>Paneer Burger</option><option>Special Gupta Ji Burger</option><option>Veg Momos (6 pcs)</option><option>Paneer Momos (6 pcs)</option><option>Fried Momos (6 pcs)</option><option>Tandoori Momos (6 pcs)</option><option>Special Combo</option><option>Multiple items — details in notes</option></select></div>
+<div class="field full"><label for="notes">Extra details (optional)</label><textarea id="notes" rows="3" placeholder="Quantity, spice preference, or other requests"></textarea></div>
+</div><button class="btn" type="submit">📲 Send Booking Request on WhatsApp</button><p style="font-size:.85rem;color:#6a6259">This sends a request only; the shop must confirm availability and final price.</p></form></div></section>
+<section id="about"><div class="about">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Casual restaurant dining area" loading="lazy">
+<div><div class="eyebrow">Made with care</div><h2>About GUPTA JI BURGER CENTRE</h2><p>Hi! I’m Sumit, and GUPTA JI BURGER CENTRE is built around a simple idea: serve satisfying burgers, delicious momos, and friendly service at prices customers can enjoy. Thanks for supporting a local food business!</p><div class="checks"><span>🥬 Fresh ingredients</span><span>🧼 Clean preparation</span><span>💛 Friendly prices</span><span>😊 Customer care</span></div></div>
+</div></section>
+</main>
+<footer><div class="logo">👨‍🍳 GUPTA JI <small>BURGER CENTRE</small></div><div><b>Find us</b><p>Sector 15, Faridabad</p><p>Near Ajronda Metro Station</p></div><div><b>Call / WhatsApp</b><p><a href="tel:9584959135">📞 9584959135</a></p><p><a href="https://wa.me/919584959135" target="_blank" rel="noopener">WhatsApp: 9584959135</a></p><a class="wa" id="footerWa" href="https://wa.me/919584959135" target="_blank" rel="noopener">Chat on WhatsApp</a></div></footer>
+<div class="smallprint">© <span id="year"></span> GUPTA JI BURGER CENTRE · Fresh Food · Great Taste · Made with ❤️ in India</div>
+<script>
+/* IMPORTANT: Replace 910000000000 below with your WhatsApp number including country code, digits only.
+   Example India: 919876543210 (do not include +, spaces, or dashes). */
+const WHATSAPP_NUMBER = "919584959135";
+function waUrl(message="Hello GUPTA JI BURGER CENTRE! I want to ask about your menu.") {
+  return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+}
+document.getElementById("headerWa").href = waUrl();
+document.getElementById("footerWa").href = waUrl();
+document.getElementById("year").textContent = new Date().getFullYear();
+const dateInput = document.getElementById("date");
+const now = new Date(); dateInput.min = new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
+document.getElementById("orderForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  if (WHATSAPP_NUMBER === "910000000000") {
+    alert("Please set your real WhatsApp number in the website file before taking bookings. Find WHATSAPP_NUMBER in the script near the bottom.");
+    return;
+  }
+  const msg = `Hi GUPTA JI BURGER CENTRE! I'd like to request an order.\nName: ${document.getElementById("customer").value}\nPhone: ${document.getElementById("phone").value}\nDate: ${dateInput.value}\nTime: ${document.getElementById("time").value}\nItem: ${document.getElementById("item").value}\nNotes: ${document.getElementById("notes").value || "None"}\nPlease confirm availability and total price.`;
+  window.open(waUrl(msg), "_blank", "noopener");
+});
+</script>
+</body></html>
